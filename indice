@@ -1,0 +1,84 @@
+1) Instalando a Versão 10.3 (Community Edition)
+
+2) Explorando a IDE do Delphi (- Versao DELPI para LINUX - LAZARO)
+- Arquivos DFM e PAS
+- Propriedades e Eventos do Form
+- Project Manager
+- ToolPalette
+- Build Configuration
+- Target Plataform  (na versão PRO temos opcao para Android e Mac)
+ - Primeira Compilacao
+ - Abas Design e Code - F12 alterna janelas
+    - Tools , Options (Aumentar a fonte do CODE) - USer Interface - editor - Display 
+- COde 
+  - Explicando o CODE basico
+     - Declaracao de UNIT
+     - interface
+     - uses - Bibliotecas automaticas do Delphi ou indicadas
+     - type - instancia de Classe/objeto (Button1: TButton)
+     - private - variaveis somente no form
+     - public  - variaveis globais
+     - var - variavel.. entender melhor
+     - implementation - Codigos...
+
+3) Declaracao de Variaveis
+ Declaracao LOCAL, Privada e Publica
+     STRING := 'texto'
+     INTEGER := 1000
+     REAL := 10.00; Valores Flutuantes
+     DOUBLE := 10.00 - Valores flutuantes + precisao (15)
+     CURRENCY := 100.00;
+     BOOLEAN : = true ou false
+ 
+4) Objetos TLabel e TEDit 
+   Concatenacao de Strings (+) - Soma de Valores
+   Funcoes de Conversao 
+        StrToInt / IntToStr
+             Se tiver ponto, usar DOUBLE ao inves de INTEGER
+                    STRtoFLOAT e FLOATtoSTR
+         Propriedade NUMBERONLY (Objeto Edit)
+ 
+5) Expressoes Aritmeticas
+
+6) Expressoes Logicas
+
+7) Funcoes ShowMessage e Inputbox
+
+
+8) Tomada de Decisao
+   If/ Then / Else
+   Try..Except
+   Case..of
+
+09) Repeticoes
+  For / Next 
+  While
+  Repeat
+  
+10) Trabalhando com multiplos Formularios
+   Uses...Units
+   
+11) Imagens 
+    Objeto Imagem
+    Imagems em objetos (botoes..)
+
+12 ) Menus , submenus e PopUpMenus
+
+13) Objeto Memo (textos longos)
+
+14) Projeto com Banco de Dados MsAccess
+  Construcao de um CRUD (Cadastro de Contatos)
+  Objetos:
+    FDConnection
+    BindNavigator
+    DBNavigator
+    DBgrid
+
+
+
+
+
+
+
+ 
+            
