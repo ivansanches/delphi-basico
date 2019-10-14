@@ -1,82 +1,118 @@
-1) Instalando a Versão 10.3 (Community Edition)
+======================================
+============= AULA 1
+========================================
+Video 
+Abertura do curso e Instalação do Delphi Versão 10.3 (Community Edition)
+Explorando/Conhecendo a IDE do Delphi (- Versao DELPHI para LINUX - LAZARO)
 
-2) Explorando a IDE do Delphi (- Versao DELPI para LINUX - LAZARO)
-- Arquivos DFM e PAS
-- Propriedades e Eventos do Form
-- Project Manager
-- ToolPalette
-- Build Configuration
-- Target Plataform  (na versão PRO temos opcao para Android e Mac)
- - Primeira Compilacao
- - Abas Design e Code - F12 alterna janelas
-    - Tools , Options (Aumentar a fonte do CODE) - USer Interface - editor - Display 
-- COde 
-  - Explicando o CODE basico
-     - Declaracao de UNIT
-     - interface
-     - uses - Bibliotecas automaticas do Delphi ou indicadas
-     - type - instancia de Classe/objeto (Button1: TButton)
-     - private - variaveis somente no form
-     - public  - variaveis globais
-     - var - variavel.. entender melhor
-     - implementation - Codigos...
+Video 
+     - Arquivos DFM e PAS
+     - Propriedades e Eventos do Form
+     - Project Manager
+     - ToolPalette
+     - Build Configuration
+     - Target Plataform  (na versão PRO temos opcao para Android e Mac)
+      - Primeira Compilacao
+      - Abas Design e Code - F12 alterna janelas
+         - Tools , Options (Aumentar a fonte do CODE) - USer Interface - editor - Display 
+Video         
+     - COde 
+     - Explicando o CODE basico
+        - Declaracao de UNIT
+        - interface
+        - uses - Bibliotecas automaticas do Delphi ou indicadas
+        - type - instancia de Classe/objeto (Button1: TButton)
+        - private - variaveis somente no form
+        - public  - variaveis globais
+        - var - variavel.. entender melhor
+        - implementation - Codigos...
 
-3) Declaracao de Variaveis
- Declaracao LOCAL, Privada e Publica
-     STRING := 'texto'
-     INTEGER := 1000
-     REAL := 10.00; Valores Flutuantes
-     DOUBLE := 10.00 - Valores flutuantes + precisao (15)
-     CURRENCY := 100.00;
-     BOOLEAN : = true ou false
+Video 
+   -Declaracao de Variaveis
+   - Declaracao LOCAL, Privada e Publica
+       STRING := 'texto'
+       INTEGER := 1000
+       REAL := 10.00; Valores Flutuantes
+       DOUBLE := 10.00 - Valores flutuantes + precisao (15)
+       CURRENCY := 100.00;
+       BOOLEAN : = true ou false
  
-4) Objetos TLabel e TEDit 
+======================================
+============= AULA 2 - Objetos e conceitos básicos
+======================================== 
+Objetos TLabel e TEDit 
    Concatenacao de Strings (+) - Soma de Valores
    Funcoes de Conversao 
         StrToInt / IntToStr
              Se tiver ponto, usar DOUBLE ao inves de INTEGER
                     STRtoFLOAT e FLOATtoSTR
          Propriedade NUMBERONLY (Objeto Edit)
- 
-5) Expressoes Aritmeticas
-
-6) Expressoes Logicas
-
-7) Funcoes ShowMessage e Inputbox
-
-
-8) Tomada de Decisao
+Expressoes Aritmeticas
+Expressoes Logicas
+Funcoes ShowMessage e Inputbox
+Tomada de Decisao
    If/ Then / Else
    Try..Except
    Case..of
-
-09) Repeticoes
+Repeticoes
   For / Next 
   While
   Repeat
-  
-10) Trabalhando com multiplos Formularios
-   Uses...Units
+
+======================================
+============= AULA 3 - Projetos CONTATOS (CRUD por objetos)
+======================================== 
    
-11) Imagens 
+VIDEO
+    Projeto com Banco de Dados  - Cadastro de Contatos
+    Construcao da tabela
+VIDEO
+    Estabelecendo conexao - Objeto FDConnection
+    Montando o BIND
+    Linkando objetos do form com campos da tabela
+VIDEO
+    Navegando pelos registros - Objeto DBNavigator
+VIDEO
+    GridView - Mostrando registros na grade - Objeto DBgrid
+   
+     
+     
+======================================
+============= AULA 4 - Projetos CONTATOS (CRUD por manualmente)
+======================================== 
+VIDEO
+   Estabelecendo conexao manualmente
+   Objetos Edit, Button , FDConnection e FDTable
+   Eventos BeforeInsert, BeforePost
+    Métodos Insert e Post
+VIDEO
+   Criação de Procedures (limpar campos)
+   Showmessage
+VIDEO
+   Metodos Next, Prior, First, Last  e Delete
+VIDEO
+   Consistencia de dados antes da gravacao
+VIDEO
+   GridView -  Alterando status do registro pela navegacao na grade
+
+
+======================================
+============= AULA 5 - Refinando o projeto
+======================================== 
+
+VIDEO
+    Imagens 
     Objeto Imagem
     Imagems em objetos (botoes..)
 
-12 ) Menus , submenus e PopUpMenus
-
-13) Objeto Memo (textos longos)
-
-14) Projeto com Banco de Dados MsAccess
-  Construcao de um CRUD (Cadastro de Contatos)
-  Objetos:
-    FDConnection
-    BindNavigator
-    DBNavigator
-    DBgrid
-
-
-
-
+VIDEO
+    Objeto Memo (textos longos)
+    
+VIDEO
+Trabalhando com multiplos Formularios
+   Uses...Units
+VIDEO
+     Menus , submenus e PopUpMenus
 
 
 
