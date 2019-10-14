@@ -38,8 +38,9 @@ Video
        BOOLEAN : = true ou false
  
 ======================================
-============= AULA 2 - Objetos e conceitos básicos
+============= AULA 2 - Objetos e conceitos/operações básicos
 ======================================== 
+VIDEO
 Objetos TLabel e TEDit 
    Concatenacao de Strings (+) - Soma de Valores
    Funcoes de Conversao 
@@ -47,13 +48,18 @@ Objetos TLabel e TEDit
              Se tiver ponto, usar DOUBLE ao inves de INTEGER
                     STRtoFLOAT e FLOATtoSTR
          Propriedade NUMBERONLY (Objeto Edit)
+VIDEO
 Expressoes Aritmeticas
 Expressoes Logicas
 Funcoes ShowMessage e Inputbox
+
+VIDEO
 Tomada de Decisao
    If/ Then / Else
    Try..Except
    Case..of
+
+VIDEO
 Repeticoes
   For / Next 
   While
@@ -101,18 +107,26 @@ VIDEO
 ======================================== 
 
 VIDEO
-    Imagens 
-    Objeto Imagem
-    Imagems em objetos (botoes..)
+    Inserindo um campo de imagem
+    Objeto Tmage
+     Objeto OpenDialog
+       Funcao Filexists
+       
+
 
 VIDEO
-    Objeto Memo (textos longos)
-    
+    Objeto Memo (textos longos) 
+      Descricao do contato
+          
 VIDEO
 Trabalhando com multiplos Formularios
    Uses...Units
+    Criando um formulario para informaçoes do Projeto (Sobre)
+
 VIDEO
      Menus , submenus e PopUpMenus
+      Criando um menu Principal (Splash Screen) para acesso o Formulario de Contato, Sobre e Saida.
+      
 
 
 
