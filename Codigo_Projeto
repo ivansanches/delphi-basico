@@ -1,8 +1,118 @@
 ==================================================
+======== FORM PRINCIPAL (Menu de Acesso - Forms Gestao, Sobre e opção de Saida )
+==================================================
+
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
+
+type
+  TForm5 = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    MainMenu1: TMainMenu;
+    Formularios1: TMenuItem;
+    Sobre1: TMenuItem;
+    Saida1: TMenuItem;
+    Contatos1: TMenuItem;
+    procedure Contatos1Click(Sender: TObject);
+    procedure Sobre1Click(Sender: TObject);
+    procedure Saida1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3, Unit4;
+
+procedure TForm5.Contatos1Click(Sender: TObject);
+begin
+form5.hide;
+form3.show;
+end;
+
+procedure TForm5.Saida1Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TForm5.Sobre1Click(Sender: TObject);
+begin
+form5.Hide;
+form4.show;
+end;
+
+end.
+
+
+==================================================
+======== FORM SOBRE (informacoes do projeto)
+==================================================
+
+
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Unit5;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Memo1: TMemo;
+    Bt_Fechar: TButton;
+    procedure Bt_FecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3;
+
+procedure TForm4.Bt_FecharClick(Sender: TObject);
+begin
+form5.show;
+form4.hide;
+
+end;
+
+end.
+
+
+
+
+
+==================================================
+======== FORM de GESTAO DOS CONTATOS
+==================================================
 
 unit Unit3;
 
 interface
+
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
@@ -27,11 +137,11 @@ type
     permissao: TEdit;
     idade: TEdit;
     STATUS: TLabel;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    Button5: TButton;
+    Bt_Novo: TButton;
+    Bt_Editar: TButton;
+    Bt_Salvar: TButton;
+    Bt_Excluir: TButton;
+    Bt_Cancelar: TButton;
     Button6: TButton;
     Button7: TButton;
     SpeedButton1: TSpeedButton;
@@ -39,24 +149,28 @@ type
     DBGrid1: TDBGrid;
     OpenDialog1: TOpenDialog;
     Image1: TImage;
-    Button8: TButton;
-    Button9: TButton;
+    Bt_FindImage: TButton;
+    Bt_Fechar: TButton;
+    Procura: TEdit;
+    Bt_FIND: TButton;
 
     procedure ConectarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure Bt_NovoClick(Sender: TObject);
     procedure TB_USUARIOSBeforePost(DataSet: TDataSet);
     procedure TB_USUARIOSBeforeInsert(DataSet: TDataSet);
-    procedure Button3Click(Sender: TObject);
+    procedure Bt_SalvarClick(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure Bt_ExcluirClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
-    procedure Button8Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure Bt_FindImageClick(Sender: TObject);
+    procedure Bt_EditarClick(Sender: TObject);
     procedure Sobre1Click(Sender: TObject);
     procedure Saida1Click(Sender: TObject);
-    procedure Button9Click(Sender: TObject);
+    procedure Bt_FecharClick(Sender: TObject);
+    procedure Bt_FINDClick(Sender: TObject);
+    procedure Bt_CancelarClick(Sender: TObject);
   private
     procedure limpa;
     procedure bloqueia;
@@ -130,19 +244,19 @@ begin
 end;
 
 
-procedure TForm3.Button1Click(Sender: TObject);
+procedure TForm3.Bt_NovoClick(Sender: TObject);
 begin
 tb_usuarios.Insert;
 limpa;
 end;
 
-procedure TForm3.Button2Click(Sender: TObject);
+procedure TForm3.Bt_EditarClick(Sender: TObject);
 begin
 bloqueia;
 tb_usuarios.Edit;
 end;
 
-procedure TForm3.Button3Click(Sender: TObject);
+procedure TForm3.Bt_SalvarClick(Sender: TObject);
 begin
 TB_USUARIOS.Post;
 showmessage('Contato inserido no banco de dados');
@@ -151,11 +265,17 @@ bloqueia;
 
 end;
 
-procedure TForm3.Button4Click(Sender: TObject);
+procedure TForm3.Bt_ExcluirClick(Sender: TObject);
 begin
 tb_usuarios.Delete;
  tb_usuarios.prior;
    carrega;
+end;
+
+procedure TForm3.Bt_CancelarClick(Sender: TObject);
+begin
+ limpa;
+ bloqueia;
 end;
 
 procedure TForm3.Button6Click(Sender: TObject);
@@ -167,11 +287,11 @@ end;
 
 procedure TForm3.Button7Click(Sender: TObject);
 begin
-  tb_usuarios.prior;
+ tb_usuarios.prior;
   carrega;
 end;
 
-procedure TForm3.Button8Click(Sender: TObject);
+procedure TForm3.Bt_FindImageClick(Sender: TObject);
 begin
 opendialog1.Execute();
 showmessage (opendialog1.filename);
@@ -183,7 +303,7 @@ tb_usuarios.post;
 
 end;
 
-procedure TForm3.Button9Click(Sender: TObject);
+procedure TForm3.Bt_FecharClick(Sender: TObject);
 begin
 form3.Hide;
 form5.show;
@@ -212,6 +332,14 @@ begin
  carrega;
 end;
 
+procedure TForm3.Bt_FINDClick(Sender: TObject);
+begin
+  if not tb_usuarios.FindKey([procura.text]) then
+    showmessage ('Contato nao encontrado')
+  else
+    carrega;
+end;
+
 procedure TForm3.FormCreate(Sender: TObject);
 begin
 begin
@@ -224,13 +352,22 @@ tb_usuarios.Active :=true;
      begin
        STATUS.CAPTION       :='conectado';
        carrega;
+
+
+
      end;
+
+
 end;
 end;
 
 procedure TForm3.TB_USUARIOSBeforeInsert(DataSet: TDataSet);
 begin
-  bloqueia;
+bloqueia;
+//nome.Enabled        :=true;
+//sobrenome.Enabled   :=true;
+//permissao.Enabled   :=true;
+//idade.Enabled       :=true;
 end;
 
 procedure TForm3.TB_USUARIOSBeforePost(DataSet: TDataSet);
@@ -243,3 +380,5 @@ begin
 end;
 
 end.
+
+
